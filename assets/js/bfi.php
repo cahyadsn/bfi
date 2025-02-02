@@ -26,7 +26,7 @@ See the MIT License for more details
 copyright (c) 2025 by cahya dsn; cahyadsn@gmail.com
 ================================================================================ */
 header("Content-type: text/javascript");
-if(!defined('_ASSET')) define('_ASSET','../assets/');
+if(!defined('_ASSET')) define('_ASSET','assets/');
 echo "var aset='"._ASSET."';";
 ?>
 $('#btn_back').on('click',function(e){
@@ -67,14 +67,9 @@ $('a.color').click(function(){
   $.post(aset+'/js/change.color.php',{'color':color});
 });
 
-$('input:radio').on('click',function(){
-  var m=$(this).attr('id');
-  //-- Check for
-  if($('#'+(m.slice(0,1)=='m'?'l':'m')+'_'+m.slice(2)).is(':checked')){
-      $('#msg').html('You cannot select both of `most` and `least` choice in the same term');
-      $('#warning').show();
-      $(this).removeAttr('checked');
-  }
+$('.w3-radio').on('click',function(){
+	$(this).parent().prev().removeClass('incomplete');
+	$(this).parent().parent().prev().children().removeClass('incomplete');
 });
 
 // Questionnaire Validation
