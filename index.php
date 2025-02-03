@@ -6,7 +6,7 @@
 FILENAME     : index.php
 AUTHOR       : CAHYA DSN
 CREATED DATE : 2025-02-02 17:08:09
-UPDATED DATE : 2025-02-02 17:08:15
+UPDATED DATE : 2025-02-03 17:30:19
 DEMO SITE    : http://psycho.cahyadsn.com/bfi
 SOURCE CODE  : https://github.com/cahyadsn/bfi
 ================================================================================
@@ -65,10 +65,10 @@ if(!isset($_SESSION['bfi_en_data'])){
 	<?php endif;?>
   <link rel="stylesheet" href="<?php echo _ASSET;?>css/bfi.css">
   <script src="<?php echo _ASSET;?>js/zepto.min.js"></script>
-  </head>
-  <body>
-  <div class="w3-top">
-  <div class="w3-bar w3-theme-d5">
+</head>
+<body>
+<div class="w3-top">
+  <div class="w3-bar w3-theme-d5" id="top_panel">
     <span class="w3-bar-item"># BFI v<?php echo $version;?></span>
     <a href="index.php" class="w3-bar-item w3-button">Home</a>
 		<div class="w3-dropdown-hover">
@@ -127,11 +127,11 @@ if(!isset($_SESSION['bfi_en_data'])){
             <tr style='border-top:solid 1px #999;'>
               <td style='width:30px !important;'>".++$no."</td>
               <td class='right'>{$d->statement}</td>
-              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='absolutely'><input type='radio' name='d[{$d->id}]' value='1' class='w3-radio' required /></td>
-              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Kinda'><input type='radio' name='d[{$d->id}]' value='2' class='w3-radio' required /></td>
-              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='50/50'><input type='radio' name='d[{$d->id}]' value='3' class='w3-radio' required /></td>
-              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Not Really'><input type='radio' name='d[{$d->id}]' value='4' class='w3-radio' required /></td>
-              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Not at All'><input type='radio' name='d[{$d->id}]' value='5' class='w3-radio' required /></td>
+              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='absolutely'><input type='radio' name='d[{$d->id}]' value='1' class='w3-radio' /></td>
+              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Kinda'><input type='radio' name='d[{$d->id}]' value='2' class='w3-radio' /></td>
+              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='50/50'><input type='radio' name='d[{$d->id}]' value='3' class='w3-radio' /></td>
+              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Not Really'><input type='radio' name='d[{$d->id}]' value='4' class='w3-radio' /></td>
+              <td style='padding-left:16px !important;width:30px !important;' class='incomplete' title='Not at All'><input type='radio' name='d[{$d->id}]' value='5' class='w3-radio' /></td>
             </tr>
                ";
             if($no%$num_perpage==0) {
@@ -155,7 +155,7 @@ if(!isset($_SESSION['bfi_en_data'])){
         </div>
       </div>
       <h6>&nbsp;</h6>
-      <div class='w3-theme-l2 w3-padding'><b>source code (v0.1) </b> : <a href='https://github.com/cahyadsn/bfi'>https://github.com/cahyadsn/bfi</a></div>
+      <div class='w3-theme-l2 w3-padding'><b>source code (v1.0) </b> : <a href='https://github.com/cahyadsn/bfi'>https://github.com/cahyadsn/bfi</a></div>
         <h2>&nbsp;</h2>
     </div>
   </div>
